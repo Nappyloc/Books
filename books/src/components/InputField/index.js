@@ -16,9 +16,10 @@ class InputField extends Component
             [ name ]: value
         } );
     };
-    
+
     // Function to clear the input field
-    clearEntry = () => {
+    clearEntry = () =>
+    {
         this.inputEntry.value = "";
     }
 
@@ -27,13 +28,18 @@ class InputField extends Component
     {
         //prevent the screen from refreshing    
         event.preventDefault()
+        // URL for google books api
+        const URL = 'https://www.googleapis.com/books/v1/volumes?q=';
+        fetch( `${ URL }${ this.state.query }`, { method: 'GET' } )
+            .then( res => res.json() )
+            .then( json => console.log( 'search results: ', json ) )
         // log the search input
         console.log( 'search', this.state.query );
         // reset the query to an empty value
-        this.setState({query: ''});
+        this.setState( { query: '' } );
         this.clearEntry()
-       
-        
+
+
     }
     render ()
     {
@@ -42,7 +48,7 @@ class InputField extends Component
         return (
             <MDBCol md="12">
                 <MDBFormInline className="md-form mr-auto mb-4">
-                    <input className="form-control mr-sm-2" name="query" value={this.state.query} type="text" ref={el => this.inputEntry = el}  placeholder="Search" aria-label="Search" onChange={this.inputChange} />
+                    <input className="form-control mr-sm-2" name="query" value={this.state.query} type="text" ref={el => this.inputEntry = el} placeholder="Search" aria-label="Search" onChange={this.inputChange} />
                     <MDBBtn gradient="purple" rounded size="sm" type="submit" className="mr-auto" onClick={this.search}>
                         Search
             </MDBBtn>

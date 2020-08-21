@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBFormInline } from "mdbreact";
+import { MDBBtn, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import './App.css';
 import Media from './components/Media'
+import Header from './components/Header'
 
 class App extends Component 
 {
@@ -52,45 +53,38 @@ class App extends Component
     return (
       
       <MDBContainer className="mt-5 text-center">
-        {/* JumboTron */}
-        <MDBRow>
-          <MDBCol>
-            <MDBJumbotron className="p-0">
-              <MDBCardImage
-                className="img-fluid"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(134).jpg"
-              />
-              <MDBCardBody>
-                <MDBCardTitle className="h3">Google Books Search</MDBCardTitle>
-                <MDBCardText>
-                  Search for a piece of literary heaven.
-            </MDBCardText>
-              </MDBCardBody>
-            </MDBJumbotron>
+        {/* Navication/Header */}
+        <Header/>
+        {/* Search Bar */}
+        <MDBRow md="12">
+          <MDBCol size="4">
+            <div className="md-form my-0">
+              <input 
+              className="form-control search mr-sm-2" 
+              name="query" value={this.state.query} 
+              type="text" 
+              ref={el => this.inputEntry = el} 
+              placeholder="Search" 
+              aria-label="Search" 
+              onChange={this.inputChange}
+               />
+              </div>
+            </MDBCol>
+
+            <MDBCol>
+              <MDBBtn gradient="purple" 
+              rounded size="sm" 
+              type="submit" 
+              className="mr-auto" 
+              onClick={this.search}
+              >
+                Search
+              </MDBBtn>
+            
           </MDBCol>
         </MDBRow>
-        {/* Search Bar */}
-        <MDBCol md="12">
-          <MDBFormInline className="md-form mr-auto mb-4">
-            <input 
-            className="form-control mr-sm-2" 
-            name="query" value={this.state.query} 
-            type="text" 
-            ref={el => this.inputEntry = el} 
-            placeholder="Search" 
-            aria-label="Search" 
-            onChange={this.inputChange} />
-            <MDBBtn gradient="purple" 
-            rounded size="sm" 
-            type="submit" 
-            className="mr-auto" 
-            onClick={this.search}>
-              Search
-            </MDBBtn>
-          </MDBFormInline>
-        </MDBCol>
 
-
+        {/* Search Results */}
         <Media items={this.state.items} />
       </MDBContainer>
     );

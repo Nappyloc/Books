@@ -24,7 +24,7 @@ class Media extends Component
                                     <MDBMedia heading>
                                         {title}
                                     </MDBMedia>
-                                    {infoLink}
+                                    <a href={infoLink} target="_blank" rel="noopener noreferrer">View on Google Books</a>
                                 </MDBMedia>
                                 
                             </MDBMedia>

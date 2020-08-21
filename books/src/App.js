@@ -70,7 +70,7 @@ class App extends Component
                />
               </div>
             </MDBCol>
-
+            {/* Search Button */}
             <MDBCol>
               <MDBBtn gradient="purple" 
               rounded size="sm" 

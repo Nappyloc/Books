@@ -29,6 +29,11 @@ class App extends Component
   {
     //prevent the screen from refreshing    
     event.preventDefault()
+    // Validate Entry
+    if(this.state.query === "") {
+      alert("please enter a valid search")
+    }else {
+
     // URL for google books api
     const URL = 'https://www.googleapis.com/books/v1/volumes?q=';
     // Fetch the data from google using the GET
@@ -42,6 +47,7 @@ class App extends Component
     // reset the query to an empty value
     this.setState( { query: '' } );
     this.clearEntry()
+    }
   }
 
 
@@ -57,6 +63,7 @@ class App extends Component
         <Header/>
         {/* Search Bar */}
         <MDBRow md="12">
+          <MDBCol size="3"></MDBCol>
           <MDBCol size="4">
             <div className="md-form my-0">
               <input 
@@ -67,11 +74,13 @@ class App extends Component
               placeholder="Search" 
               aria-label="Search" 
               onChange={this.inputChange}
+            
+            
                />
               </div>
             </MDBCol>
             {/* Search Button */}
-            <MDBCol>
+            <MDBCol size="2">
               <MDBBtn gradient="purple" 
               rounded size="sm" 
               type="submit" 

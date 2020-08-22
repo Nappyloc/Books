@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem,MDBIcon, MDBContainer } from 'mdbreact';
 import './style.css'
 
-class Header extends React.Component
+class Header extends Component
 {
     constructor( props )
     {

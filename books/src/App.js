@@ -13,6 +13,9 @@ function App() {
       <Route path='/google.com' component={() => { 
      window.location.href = 'https://google.com'; 
      return null;}}/>
+     <Route path='/play.google.com' component={() => { 
+     window.location.href = 'https://play.google.com'; 
+     return null;}}/>
       
     </Switch>
    </BrowserRouter>

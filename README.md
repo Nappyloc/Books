@@ -25,9 +25,9 @@
 
 ## Search Instructions
 
-    * Type in the name of the book or a reading topic into the search bar
-    * Click the search button
-    * Review the search results
+* Type in the name of the book or a reading topic into the search bar
+* Click the search button
+* Review the search results
 
 ## Technologies Used
 

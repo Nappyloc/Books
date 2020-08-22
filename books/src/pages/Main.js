@@ -47,7 +47,6 @@ class Main extends Component
     if ( this.state.query === "" )
     {
       this.setState( { modal10: true } )
-      console.log( this.state.modal10 )
     } else
     {
 
@@ -59,8 +58,6 @@ class Main extends Component
         .then( res => res.json() )
         // Update items state to equal the Json data
         .then( json => { let { items } = json; this.setState( { items } ) } )
-      // log the search input
-      console.log( 'search', this.state.query );
       // reset the query to an empty value
       this.setState( { query: '' } );
       this.clearEntry()
@@ -76,7 +73,7 @@ class Main extends Component
     return (
 
       <MDBContainer className="mt-5 text-center">
-        {/* Navication/Header */}
+        {/* Navigation/Header */}
         <Header />
         {/* Search Bar */}
         <MDBRow md="12">
@@ -91,22 +88,20 @@ class Main extends Component
                 placeholder="Search"
                 aria-label="Search"
                 onChange={this.inputChange}
-
-
               />
             </div>
           </MDBCol>
+
+
           {/* Search Button */}
           <MDBCol size="2">
             <MDBBtn gradient="purple"
               rounded size="sm"
               type="submit"
               className="mr-auto"
-              onClick={this.search}
-            >
+              onClick={this.search}>
               Search
               </MDBBtn>
-
           </MDBCol>
         </MDBRow>
 
@@ -114,25 +109,16 @@ class Main extends Component
         <Media items={this.state.items} />
 
         {/* Modal */}
-        <MDBModal isOpen={this.state.modal10} toggle={this.toggle( 10 )} frame position="top">
+        <
+          // @ts-ignore
+          MDBModal isOpen={this.state.modal10} toggle={this.toggle( 10 )} frame position="top">
           <MDBModalBody className="text-center">
             Please enter a search entry to get started
             <MDBBtn gradient="purple" rounded size="sm" onClick={this.toggle( 10 )}>Close</MDBBtn>
           </MDBModalBody>
         </MDBModal>
 
-
-
-
-
-
       </MDBContainer>
-
-
-
-
-
-
 
     );
   }

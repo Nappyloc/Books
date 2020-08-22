@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MDBBtn, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import '../App.css';
+import './Main.css'
 import Media from '../components/Media'
 import Header from '../components/Header'
 

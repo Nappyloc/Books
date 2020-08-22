@@ -1,5 +1,6 @@
 import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem,MDBIcon, MDBContainer } from 'mdbreact';
+import './style.css'
 
 class Header extends React.Component
 {
@@ -34,9 +35,9 @@ class Header extends React.Component
                         <MDBCollapse isOpen={this.state.collapse} navbar>
                             <MDBNavbarNav right>
                                 <MDBNavItem>
-                                    <MDBNavLink to="google.com"><MDBIcon fab icon="google" /></MDBNavLink>
+                                <a className="google" href="http://www.google.com" target="_blank" rel="noopener noreferrer"><MDBIcon fab icon="google" /></a>
                                 </MDBNavItem><MDBNavItem>
-                                    <MDBNavLink to="play.google.com"><MDBIcon fab icon="google-play" /></MDBNavLink>
+                                <a className="google" href="http://play.google.com" target="_blank" rel="noopener noreferrer"><MDBIcon fab icon="google-play" /></a>
                                 </MDBNavItem>
                             </MDBNavbarNav>
                         </MDBCollapse>
@@ -45,7 +46,7 @@ class Header extends React.Component
 
                 <MDBContainer style={container} className="text-center mt-5">
                     <h2>Google Book Search</h2>
-                    <h5>Find your piece of literary comfort</h5>
+                    <h5>Search for a book below to find your piece of literary comfort</h5>
                 </MDBContainer>
             </div>
         );

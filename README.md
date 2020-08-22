@@ -9,7 +9,7 @@
 
 ### Home Page
 
-![Home](https://github.com/hungle913/images/blob/master/DIY/Home_ScreenShot.PNG?raw=true "Home Screen")
+![Home](https://res.cloudinary.com/dking14/image/upload/v1598116961/Books%20Search/books_landing_zkb62n.jpg "Home Screen")
 
 ### Search Bar
 
@@ -17,11 +17,11 @@
 
 ### Search Results
 
-![Search Results](https://res.cloudinary.com/dking14/image/upload/v1598116961/Books%20Search/books_search_results_k4yxlg.jpg"Search Results")
+![Search Results](https://res.cloudinary.com/dking14/image/upload/v1598116961/Books%20Search/books_search_results_k4yxlg.jpg "Search Results")
 
 ### Navigatio to Purchase Screen
 
-![Purchase Navigation](https://res.cloudinary.com/dking14/image/upload/v1598116961/Books%20Search/books_search_results_k4yxlg.jpg"Purchase Navigation")
+![Purchase Navigation](https://res.cloudinary.com/dking14/image/upload/v1598116961/Books%20Search/books_search_results_k4yxlg.jpg "Purchase Navigation")
 
 ## Search Instructions
 
